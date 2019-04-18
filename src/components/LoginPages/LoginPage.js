@@ -59,7 +59,7 @@ export default class LoginPage extends React.Component {
                     <WhiteSpace size="md"/>
                     <Flex justify="end">
                         <WingBlank size="lg">
-                            <Link to="/Register/">注册用户</Link>
+                            <Link to="/Register/UserType/">注册用户</Link>
                         </WingBlank>
                     </Flex>
 
