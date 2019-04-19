@@ -1,0 +1,18 @@
+@import "../../styles/normalStyle.css";
+
+.bg_selection {
+    background-color: #FFFFFF;
+    padding: 12px 15px;
+    margin: 2px 0;
+}
+
+.font_label {
+    font-size: 17px;
+}
+
+.font_radio {
+    font-size: 19px;
+}
+
+
+
