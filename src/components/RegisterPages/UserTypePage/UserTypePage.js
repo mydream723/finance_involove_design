@@ -6,6 +6,7 @@ import {withRouter} from "react-router-dom"
 
 const Item = List.Item;
 const Brief = Item.Brief;
+
 class UserTypePage extends React.Component {
 
     constructor(props) {
@@ -16,22 +17,22 @@ class UserTypePage extends React.Component {
     render() {
         return (
             <div>
-                <Header title="用户类别选择" />
+                <Header title="用户类别选择"/>
                 {/*<NavBar*/}
-                    {/*leftContent={[*/}
-                        {/*<Icon key="0" type="left" size="sm" color="#FFF" onClick={() => {*/}
-                            {/*this.props.history.goBack();*/}
-                        {/*}}/>*/}
-                    {/*]}*/}
+                {/*leftContent={[*/}
+                {/*<Icon key="0" type="left" size="sm" color="#FFF" onClick={() => {*/}
+                {/*this.props.history.goBack();*/}
+                {/*}}/>*/}
+                {/*]}*/}
                 {/*>*/}
-                    {/*用户类别选择*/}
+                {/*用户类别选择*/}
                 {/*</NavBar>*/}
                 <div>
                     <List renderHeader={() => '请选择用户类型'} className="list_selection">
                         <Item
                             arrow="horizontal"
                             multipleLine
-                            onClick={()=>{
+                            onClick={() => {
                                 this.props.history.push("/Register/PersonalValidate")
                             }}
 
@@ -42,7 +43,9 @@ class UserTypePage extends React.Component {
                         <Item
                             arrow="horizontal"
                             multipleLine
-                            onClick={()=>{}}
+                            onClick={() => {
+                                this.props.history.push("/Register/CompanyContact");
+                            }}
 
                         >
                             企业用户<Brief>第三方企业用户注册</Brief>
