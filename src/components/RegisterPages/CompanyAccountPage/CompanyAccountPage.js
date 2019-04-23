@@ -49,6 +49,7 @@ class CompanyAccountPage extends Component {
 
                 <InputItem
                     value={this.state.password}
+                    type="password"
                     onChange={(value) => {
                         this.setState({
                             password: value,
@@ -60,6 +61,7 @@ class CompanyAccountPage extends Component {
 
                 <InputItem
                     value={this.state.repeatPassword}
+                    type="password"
                     onChange={(value) => {
                         this.setState({
                             repeatPassword: value,

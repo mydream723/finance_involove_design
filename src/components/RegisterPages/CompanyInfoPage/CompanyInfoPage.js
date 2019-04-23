@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {NavBar, Icon, InputItem, ImagePicker, WhiteSpace, WingBlank} from "antd-mobile";
+import {withRouter} from "react-router-dom";
 import styles from "./CompanyInfoPage.css"
+
 
 class CompanyInfoPage extends Component {
     constructor(props) {
@@ -12,13 +14,13 @@ class CompanyInfoPage extends Component {
             address: '',
             contact: '',
             contactPos: '',
-            files: [],
+            qualificationFiles: [],
             multiple: true,
         }
     }
 
     render() {
-        const {files} = this.state;
+        const {qualificationFiles} = this.state;
         return (
             <div>
                 <NavBar
@@ -110,11 +112,11 @@ class CompanyInfoPage extends Component {
                     相关资质上传
                 </div>
                 <ImagePicker
-                    data={files}
+                    files={qualificationFiles}
                     onChange={this.onChange}
-                    selectable={files.length < 7}
+                    selectable={qualificationFiles.length < 7}
                     multiple={this.state.multiline}
-                />
+                ></ImagePicker>
 
             </div>
 
@@ -123,10 +125,11 @@ class CompanyInfoPage extends Component {
     }
 
     onChange = (files, type, index) => {
+        console.log(files);
         this.setState({
-            files: files,
+            qualificationFiles: files,
         })
     }
 }
 
-export default CompanyInfoPage;
+export default withRouter(CompanyInfoPage);

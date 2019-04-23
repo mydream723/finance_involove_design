@@ -9,6 +9,7 @@ import PersonalPasswordPage from "./components/RegisterPages/PersonalPasswordPag
 import CompanyContactPage from "./components/RegisterPages/CompanyContactPage/CompanyContactPage"
 import CompanyInfoPage from "./components/RegisterPages/CompanyInfoPage/CompanyInfoPage"
 import CompanyAccountPage from "./components/RegisterPages/CompanyAccountPage/CompanyAccountPage"
+import MainManagerPage from "./components/BusinessPages/ManagerPages/MainManagerPage/MainManagerPage"
 import './App.css';
 
 class App extends Component {
@@ -30,6 +31,8 @@ class App extends Component {
                 <Route path="/Register/CompanyInfo" component={CompanyInfoPage}/>
                 {/*企业注册-用户名与密码*/}
                 <Route path='/Register/CompanyAccount' component={CompanyAccountPage}/>
+                {/*管理用户-首页*/}
+                <Route path='/Business/Manager/Main' component={MainManagerPage}/>
             </Router>
 
         );

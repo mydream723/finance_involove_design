@@ -25,6 +25,10 @@ export default class LoginPage extends React.Component {
         const {username, password} = this.state;
         return (
             <div className="container">
+                <div className="container_title">
+                    <h1>涉案财务全流程</h1>
+                </div>
+
                 <div className="container_content">
 
                     <WingBlank size="lg">
@@ -79,7 +83,17 @@ export default class LoginPage extends React.Component {
     toLogin = () => {
         const username = this.state.username;
         const password = this.state.password;
-        Toast.loading('正在登录', 2, null, true);
-        // Toast.info('username is ' + username + '; password is ' + password);
+        if (username == "undefined" || username == null || username == "") {
+            Toast.info("请输入用户名");
+            return;
+        }
+        if (password == "undefined" || password == null || password == "") {
+            Toast.info("请输入密码");
+            return;
+        }
+
+        Toast.loading('正在登录', 2, () => {
+            this.props.history.push("/Business/Manager/Main");
+        }, true);
     }
 }

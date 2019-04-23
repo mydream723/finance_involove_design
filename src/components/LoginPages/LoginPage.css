@@ -5,11 +5,16 @@
 }
 
 .container .container_content {
-    margin-top: 200px;
+    margin-top: 120px;
     position: relative;
     /*top: 50%;*/
     /*transform: translateX(-50%);*/
     /*left: 50%;*/
+}
+
+.container_title{
+    text-align: center;
+    padding-top: 50px;
 }
 
 
