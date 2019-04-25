@@ -1,9 +1,18 @@
 import React, {Component} from 'react';
-import {TabBar, NavBar, Icon, Grid} from "antd-mobile";
+import {TabBar, NavBar, Icon, Grid, Toast} from "antd-mobile";
 import styles from "./MainManagerPage.css";
 import {withRouter} from "react-router-dom";
 
-const platformFunctions = [{icon:'',text:''},{icon:'',text:''}];
+const platformFunctions = [
+    {
+        icon: require("../../../../static/images/ic_financial_manage.png"),
+        text: '涉案财物管理'
+    },
+    {
+        icon: require("../../../../static/images/ic_financial_found.png"),
+        text: '涉案财物招领'
+    }];
+
 class MainManagerPage extends Component {
 
     constructor(props) {
@@ -23,7 +32,17 @@ class MainManagerPage extends Component {
                     </NavBar>
 
                     <Grid
-                        data={}
+                        data={platformFunctions}
+                        columnNum={3}
+                        onClick={(el, index) => {
+                            if (index == 0) {
+                                //财物管理
+                                this.props.history.push("/Business/Manager/financialManage");
+                            } else if (index == 1) {
+                                //财物招领
+                                Toast.info("财物招领");
+                            }
+                        }}
                     ></Grid>
                 </div>
             );

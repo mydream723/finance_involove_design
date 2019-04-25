@@ -10,6 +10,7 @@ import CompanyContactPage from "./components/RegisterPages/CompanyContactPage/Co
 import CompanyInfoPage from "./components/RegisterPages/CompanyInfoPage/CompanyInfoPage"
 import CompanyAccountPage from "./components/RegisterPages/CompanyAccountPage/CompanyAccountPage"
 import MainManagerPage from "./components/BusinessPages/ManagerPages/MainManagerPage/MainManagerPage"
+import FinancialManagePage from "./components/BusinessPages/ManagerPages/FinancialManagePage/FinancialManagePage"
 import './App.css';
 
 class App extends Component {
@@ -33,6 +34,8 @@ class App extends Component {
                 <Route path='/Register/CompanyAccount' component={CompanyAccountPage}/>
                 {/*管理用户-首页*/}
                 <Route path='/Business/Manager/Main' component={MainManagerPage}/>
+                {/*管理用户-涉案财物管理列表*/}
+                <Route path='/Business/Manager/financialManage' component={FinancialManagePage}/>
             </Router>
 
         );
