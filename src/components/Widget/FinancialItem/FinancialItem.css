@@ -4,19 +4,29 @@
     height: 100px;
     background-color: #FFFFFF;
     padding: 10px 16px;
+    position: relative;
 }
 
 .item_img {
     width: 100px;
     height: 100px;
     position: absolute;
+    left: 16px;
+    top: 10px;
 }
 
 .item_content {
+    padding: 10px 0px;
     height: 100px;
     position: absolute;
     margin-left: 120px;
+    text-align: left;
 }
-.item_label{
+
+.item_line {
+    margin-top: 6px;
+}
+
+.item_label {
     display: inline;
 }

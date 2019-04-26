@@ -11,6 +11,10 @@ import CompanyInfoPage from "./components/RegisterPages/CompanyInfoPage/CompanyI
 import CompanyAccountPage from "./components/RegisterPages/CompanyAccountPage/CompanyAccountPage"
 import MainManagerPage from "./components/BusinessPages/ManagerPages/MainManagerPage/MainManagerPage"
 import FinancialManagePage from "./components/BusinessPages/ManagerPages/FinancialManagePage/FinancialManagePage"
+import FinancialManageDetailPage
+    from "./components/BusinessPages/ManagerPages/FinancialManagerDetailPage/FinancialManageDetailPage";
+import FinancialManageEditorPage
+    from "./components/BusinessPages/ManagerPages/FinancialManageEditorPage/FinancialManageEditorPage";
 import './App.css';
 
 class App extends Component {
@@ -36,6 +40,10 @@ class App extends Component {
                 <Route path='/Business/Manager/Main' component={MainManagerPage}/>
                 {/*管理用户-涉案财物管理列表*/}
                 <Route path='/Business/Manager/financialManage' component={FinancialManagePage}/>
+                {/*管理用户-涉案财物管理详情*/}
+                <Route path='/Business/Manager/financialDetail' component={FinancialManageDetailPage}/>
+                {/*管理用户-涉案财物管理编辑*/}
+                <Route path='/Business/Manager/financialEditor' component={FinancialManageEditorPage}/>
             </Router>
 
         );

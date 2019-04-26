@@ -5,13 +5,13 @@ import FinancialItem from "../FinancialItem/FinancialItem";
 const dataItem = {
     img: "https://zos.alipayobjects.com/rmsportal/dKbkpPXKfvZzWCM.png",
     name: "笔记本电脑",
-    type: "电子",
+    type: "电子财务",
     number: "No.12010001",
 
 };
 
 const data = [];
-for (let i = 1; i < 100; i++) {
+for (let i = 1; i < 20; i++) {
     dataItem.key = i;
     data.push(dataItem);
 }
@@ -52,7 +52,8 @@ class FinancialList extends Component {
     renderRow = (dataRow) => {
         return (
             <div>
-                <FinancialItem financialName={dataRow.name}/>
+                <FinancialItem financialName={dataRow.name} financialNum={dataRow.number} financialType={dataRow.type}
+                               financialImg={dataRow.img} />
             </div>
         );
     }

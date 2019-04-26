@@ -1,0 +1,28 @@
+@import "../../../styles/normalStyle.css";
+
+.container {
+    height: 100%;
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.content_container {
+    width: 100%;
+    padding: 10px 30px;
+    text-align: left;
+}
+
+.label_space {
+    margin-top: 20px;
+}
+
+.label_content {
+    display: inline;
+}
+
+.button {
+    margin: 30px;
+
+}
+
+
